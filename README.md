@@ -80,10 +80,11 @@ Where:
 One of the benefits of using Hanes-Wolf plot is it does not cluster low substrate concentrations [s] around the y-intercept contrary to e.g. Lineweaver – Burk plot that is prone to error when estimating Vmax and Km. A good alternative to Hanes-Woolf would be Eadie – Hofstee plot that also doesn’t cluster low [s] around y-intercept.
 
 3. Vmax and Kmax are obtained from the slope and intercept of the linear equation *y=mx+by *
-Where: - \( y \): is analogous to \( \frac{[S]}{v} \) 
-- \( m \): is analogous to \( \frac{1}{V_{\text{max}}} \) 
-- \( x \): is analogous to \( [S] \) 
-- \( b \): is analogous to \( \frac{K_m}{V_{\text{max}}} \)
+Where:
+- $$ \( y \) $$: is analogous to $$\( \frac{[S]}{v} \) $$
+- $$\( m \)$$: is analogous to $$\( \frac{1}{V_{\text{max}}} \)$$ 
+- $$\( x \)$$: is analogous to $$\( [S] \) $$
+- $$\( b \)$$: is analogous to $$\( \frac{K_m}{V_{\text{max}}} \)$$
 
 Hepatic intrinsic clearance (Clint) is obtained by simple $$ \text{CL}_{\text{int}} = \frac{V_{\text{max}}}{K_m} $$
 
@@ -96,11 +97,11 @@ $$ \text{In vivo } CL_{\text{int}} = CL_{\text{int}}(\text{in vitro}) \times \te
 
 5. **Ta-da!**
 
-##Contact
+## Contact
 If you have any questions, feel free to reach out! 
 - **Email**: [alicja.ziajowska@gmail.com](mailto: alicja.ziajowska@gmail.com) 
 - **GitHub**: [a-ziaj](https://github.com/a-ziaj) 
 - **LinkedIn**: [Alicja Ziajowska]( https://www.linkedin.com/in/alicja-ziajowska-b8a977180/)
 
-##References
+## References
 Obach, R. S., Baxter, J. G., Liston, T. E., Silber, B. M., Jones, B. C., MacIntyre, F., Rance, D. J., & Wastall, P. (1997). The prediction of human pharmacokinetic parameters from preclinical and in vitro metabolism data. *The Journal of pharmacology and experimental therapeutics, 283* (1), 46–58.
