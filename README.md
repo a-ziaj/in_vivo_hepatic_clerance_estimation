@@ -11,8 +11,9 @@
 - [References](#references)
 ---
 
-## About the Project
-The majority of drugs are eliminated through metabolism. Hepatic clearance prediction is crucial to estimate first in human doses and optimising new drug candidates. This project allows for estimation of in vivo hepatic clearance based on in vitro data (IVIVE ) using Hanes-Woolf plot for in vitro hepatic intrinsic clearance (Clint) determination and then extrapolation using physiological parameters. 
+## About the Project - In vitro in vivo extrapolation (IVIVE) of hepatic clearance
+
+The majority of drugs are eliminated through metabolism. Hepatic clearance prediction is crucial to estimate first in human doses and optimising new drug candidates. This project allows for estimation of in vivo hepatic clearance based on in vitro data using Hanes-Woolf plot for in vitro hepatic intrinsic clearance (Clint) determination and then extrapolation using physiological parameters. 
 
 It is important to note IVIVE may not be reliable. For instance, Obach et al. (1997) showed that IVIVE predictions of 13 out of 29 drugs fell outside the two-fold range demonstrating variability in IVIVE predictions.
 
