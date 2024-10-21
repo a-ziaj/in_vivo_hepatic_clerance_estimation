@@ -1,0 +1,7 @@
+﻿Parameters,Mouse,Rat,Cyno,Dog,Pig,Human,Other
+Standard body weight (kg),0.025,0.25,5,12,25,70,
+Liver weight (g),1.5,10,160,384,588,1680,
+Microsomal protein yield (mg/g liver),45,61,45,55,34,32,
+Hepatocellularity (106 cells/g liver),125,163,120,169,750,137,
+QH (mL/min/kg),152,72,44,55,25,20,
+QH (L/h),0.228,1.08,13.2,39.6,37.5,84,
