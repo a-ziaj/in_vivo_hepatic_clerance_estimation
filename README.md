@@ -39,7 +39,7 @@ sudo apt update
 sudo apt install r-base 
 
 # Verify R installation Rscript –version
-
+```
 ## Usage
 
 To run the analysis, execute the `IVIVE.sh` script which also invokes an R script ‘generate_graphs_and_report.R’ to perform the necessary computations and plotting. Follow all the instructions that will be provided during execution. Upon completion, the results will be automatically generated and saved in the `results` folder. This folder will contain the following files:
