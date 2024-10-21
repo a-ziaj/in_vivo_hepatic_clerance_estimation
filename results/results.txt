@@ -1,0 +1,35 @@
+In vitro in vivo extrapolation (IVIVE) of clearance in Pig 
+ 
+"concentration"	"rate"
+0	0
+0.195	35.44745021
+0.39	67.94113082
+0.78	90.79732903
+1.6	123.7251799
+3.1	145.3289884
+6.25	152.9075721
+12.5	158.5608795
+25	135.6507252
+50	166.2718822
+
+Results of the calculations:
+Vmax: 162.8091 
+Km: 0.8272897 
+
+Hanes-Woolf plot analysis: 
+Intercept: 0.005081349 
+Slope: 0.006142165 
+
+Organism data:
+"Parameters"	"Pig"
+"Standard body weight (kg)"	25
+"Liver weight (g)"	588
+"Microsomal protein yield (mg/g liver)"	34
+"Hepatocellularity (106 cells/g liver)"	750
+"QH (mL/min/kg)"	25
+"QH (L/h)"	37.5
+
+
+In vitro CLint: 196.7981 X 10^-6 L/min per mg protein 
+In vivo Clint: 236.0633 L/h  
+Hepatic clearance: 32.35951 L/h  1.29438 L/h/kg
