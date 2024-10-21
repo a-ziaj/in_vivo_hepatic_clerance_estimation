@@ -1,3 +1,4 @@
+# README: In vitro in vivo extrapolation (IVIVE) of hepatic clearance
 ## Table of Contents
 - [About the Project](#about-the-project)
 - [About the Example Data](#about-the-example-data)
@@ -11,7 +12,7 @@
 - [References](#references)
 ---
 
-## About the Project - In vitro in vivo extrapolation (IVIVE) of hepatic clearance
+## About the Project 
 
 The majority of drugs are eliminated through metabolism. Hepatic clearance prediction is crucial to estimate first in human doses and optimising new drug candidates. This project allows for estimation of in vivo hepatic clearance based on in vitro data using Hanes-Woolf plot for in vitro hepatic intrinsic clearance (Clint) determination and then extrapolation using physiological parameters. 
 
