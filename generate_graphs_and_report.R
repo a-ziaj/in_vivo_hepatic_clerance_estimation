@@ -1,3 +1,5 @@
+#!/usr/bin/env Rscript
+
 # Define data
 args <- commandArgs(trailingOnly = TRUE)
 
@@ -109,24 +111,28 @@ hepatic_clerance_Lh <- hepatic_clerance_kgh/standard_body_weight
 cat("\nResults of the calculations:\n", file = "results.txt", append = TRUE)
 cat("Vmax:", Vmax, "\n", file = "results.txt", append = TRUE)
 cat("Km:", Km, "\n", file = "results.txt", append = TRUE)
+print('Vmax, Km values saved.')
+
 
 cat("\nHanes-Woolf plot analysis: \n", file = "results.txt", append = TRUE)
 cat("Intercept:", intercept, "\n", file = "results.txt", append = TRUE)
 cat("Slope:", slope, "\n\n", file = "results.txt", append = TRUE)
+print('Hanes-Woolf plot analysis results saved.')
+
 
 cat("Organism data:\n", file = "results.txt", append = TRUE)
 selected_columns <- example_params[, c(1, which(colnames(example_params) == organism))]
 suppressWarnings(
 		 write.table(selected_columns, file = "results.txt", sep = "\t", row.names = FALSE, col.names = TRUE, append = TRUE)
 )
-
+print('Organism data added to the file')
 
 
 cat("\n\n", file = "results.txt", append = TRUE)
 cat("In vitro CLint:", in_vitro_clint, "X 10^-6 L/min per mg protein \n", file = "results.txt", append = TRUE)
 cat("In vivo Clint:", in_vivo_clint, "L/h  \n", file = "results.txt", append = TRUE)
 cat("Hepatic clearance:", hepatic_clerance_kgh, "L/h ", hepatic_clerance_Lh,"L/h/kg\n", file = "results.txt", append = TRUE)
-
+print('In vitro CLint, In vivo Clint and hepatic clereance values saved.')
 
 
 
