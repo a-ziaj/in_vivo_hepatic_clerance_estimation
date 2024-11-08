@@ -34,7 +34,7 @@ data <- data.frame(concentration, rate)
 michaelis_menten_model <- nls(rate ~ (max_val * concentration) / (mean_val + concentration),
                               data = data,
                               start = list(max_val = max(rate), mean_val = mean(concentration)))
-
+#fitting the curve
 concentration_seq <- seq(min(concentration), max(concentration), length.out = 100)
 fit_curve <- predict(michaelis_menten_model, newdata = data.frame(concentration = concentration_seq))
 
@@ -65,6 +65,7 @@ hanes_woolf_model <- lm(sr ~ concentration)
 intercept <- unname(coef(hanes_woolf_model)[1])
 slope <- unname(coef(hanes_woolf_model)[2])
 
+
 png("hanes_woolf_plot.png", width = 600, height = 450)
 plot(concentration, sr, 
      pch = 16, 
@@ -79,6 +80,8 @@ Vmax <- 1 / slope
 Km <- intercept * Vmax
 
 invisible(dev.off())
+
+
 
 #Cl calculations
 
@@ -102,6 +105,7 @@ in_vivo_clint <- in_vitro_clint*10^(-6)*liver_weight*Microsomal_protein_yield*60
 QH_Lh <- example_params[6, organism]
 standard_body_weight <- example_params[1, organism]
 
+
 hepatic_clerance_kgh <- (in_vivo_clint*QH_Lh)/(in_vivo_clint+QH_Lh)
 hepatic_clerance_Lh <- hepatic_clerance_kgh/standard_body_weight
 
@@ -114,12 +118,16 @@ cat("Km:", Km, "\n", file = "results.txt", append = TRUE)
 print('Vmax, Km values saved.')
 
 
+
+#Hanes-Woolf plot results
 cat("\nHanes-Woolf plot analysis: \n", file = "results.txt", append = TRUE)
 cat("Intercept:", intercept, "\n", file = "results.txt", append = TRUE)
 cat("Slope:", slope, "\n\n", file = "results.txt", append = TRUE)
 print('Hanes-Woolf plot analysis results saved.')
 
 
+
+#Organism data
 cat("Organism data:\n", file = "results.txt", append = TRUE)
 selected_columns <- example_params[, c(1, which(colnames(example_params) == organism))]
 suppressWarnings(
@@ -128,11 +136,22 @@ suppressWarnings(
 print('Organism data added to the file')
 
 
+
+#Extrapolation results
 cat("\n\n", file = "results.txt", append = TRUE)
 cat("In vitro CLint:", in_vitro_clint, "X 10^-6 L/min per mg protein \n", file = "results.txt", append = TRUE)
 cat("In vivo Clint:", in_vivo_clint, "L/h  \n", file = "results.txt", append = TRUE)
 cat("Hepatic clearance:", hepatic_clerance_kgh, "L/h ", hepatic_clerance_Lh,"L/h/kg\n", file = "results.txt", append = TRUE)
 print('In vitro CLint, In vivo Clint and hepatic clereance values saved.')
+
+
+
+
+
+
+
+
+
 
 
 
