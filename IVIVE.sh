@@ -97,4 +97,4 @@ mv results.txt results/
 mv hanes_woolf_plot.png results/
 mv michaelis_menten_model.png results/
 
-echo -e "Michaelis-Menten model, Hanes-Woolf plot and results.txt were saved to results folder." 
+echo -e "Michaelis-Menten model, Hanes-Woolf plot and results.txt were saved to the results folder." 
