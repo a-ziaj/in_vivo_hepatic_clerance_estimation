@@ -1,14 +1,8 @@
 #!/bin/bash
 #remove any previous results
-if [ -d "results" ]; then
-    rm -fr results	
-    echo -e "previous results deleted."
-    mkdir results
-    echo -e "new results directory created"
+if [ -d "results" ]; then rm -fr results ; echo -e "previous results deleted."; mkdir results; echo -e "new results directory created"
 else
-	touch results.txt
-	mkdir results
-	echo -e "new results directory created"
+	touch results.txt; mkdir results; echo -e "new results directory created"
 fi
 #ask if you want to run the script on example data
 echo -e "Would like to run the script on example rate of elimination data (elimination of coumarin via metabolism to 7-hydroxycoumarin by CYP2A6). [Y/n]"
@@ -16,15 +10,9 @@ echo -e "Would like to run the script on example rate of elimination data (elimi
 while true; do
 	read coumarin_data
 
-	if [[ "$coumarin_data" == "Y" || "$coumarin_data" == "y" ]]; then
-		coumarin='y'
-		echo -e "You chose to run the script on example data."
-		break
+	if [[ "$coumarin_data" == "Y" || "$coumarin_data" == "y" ]]; then coumarin='y'; echo -e "You chose to run the script on example data."; break
 	
-	elif [[ "$coumarin_data" == "N" || "$coumarin_data" == "n" ]]; then
-		coumarin='n'
-		echo -e "Please, add your substrate concentration and elimination rate data to conc_rate_template.csv and save it in this directory."
-		break
+	elif [[ "$coumarin_data" == "N" || "$coumarin_data" == "n" ]]; then coumarin='n'; echo -e "Please, add your substrate concentration and elimination rate data to conc_rate_template.csv and save it in this directory."; break
 	else
 		echo -e "Invalid input. Please enter Y or n."
 	fi
@@ -51,39 +39,14 @@ echo -e "-----------------------------------------------------------------------
 while true; do
 	read organism
 
-        if [[ "$organism" == "Mouse" || "$organism" == "mouse" ]]; then
-                organismm='Mouse'
-                echo -e "You chose a mouse."
-                break
-
-        elif [[ "$organism" == "Rat" || "$organism" == "rat" ]]; then
-                organismm='Rat'
-                echo -e "You chose a rat"
-                break
-	elif [[ "$organism" == "Cyno" || "$organism" == "cyno" ]]; then
-                organismm='Cyno'
-		echo -e "You chose a cyno (macaque)"                                                                                                   
-		break
-        elif [[ "$organism" == "Dog" || "$organism" == "dog" ]]; then
-                organismm='Dog'
-                echo -e "You chose a dog"                                                                                                              
-		break
-        elif [[ "$organism" == "Pig" || "$organism" == "pig" ]]; then
-                organismm='Pig'
-                echo -e "You chose a pig"
-		break
-        elif [[ "$organism" == "Human" || "$organism" == "human" ]]; then
-                organismm='Human'
-                echo -e "You chose a human"
-		break
-        elif [[ "$organism" == "Y" || "$organism" == "y" ]]; then
-                organismm='Pig'
-                echo -e "You chose a Pig"
-                break
-        elif [[ "$organism" == "Other" || "$organism" == "other" ]]; then
-                organismm='Other'
-                echo -e "You chose 'other', make sure to specify your own parameters by adding them under 'other' column in example_parameters.csv"
-		break
+        if [[ "$organism" == "Mouse" || "$organism" == "mouse" ]]; then organismm='Mouse'; echo -e "You chose a mouse."; break
+	elif [[ "$organism" == "Rat" || "$organism" == "rat" ]]; then organismm='Rat'; echo -e "You chose a rat"; break
+	elif [[ "$organism" == "Cyno" || "$organism" == "cyno" ]]; then organismm='Cyno'; echo -e "You chose a cyno (macaque)"; break
+        elif [[ "$organism" == "Dog" || "$organism" == "dog" ]]; then organismm='Dog'; echo -e "You chose a dog"; break
+        elif [[ "$organism" == "Pig" || "$organism" == "pig" ]]; then organismm='Pig'; echo -e "You chose a pig"; break
+        elif [[ "$organism" == "Human" || "$organism" == "human" ]]; then organismm='Human'; echo -e "You chose a human"; break
+        elif [[ "$organism" == "Y" || "$organism" == "y" ]]; then organismm='Pig'; echo -e "You chose a Pig"; break
+        elif [[ "$organism" == "Other" || "$organism" == "other" ]]; then organismm='Other'; echo -e "You chose 'other', make sure to specify your own parameters by adding them under 'other' column in example_parameters.csv"; break
 	else
                 echo -e "Invalid input. Please enter a valid name of an organism or 'Other'."
         fi
