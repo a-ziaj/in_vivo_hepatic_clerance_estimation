@@ -13,6 +13,8 @@ if (coumarin == 'y') {
 }
 
 
+
+
 organism <- args[2]
 
 # Save the data frame to a text file for the report
@@ -21,6 +23,9 @@ df <- data.frame(concentration = concentration, rate = rate)
 suppressWarnings(
 		 write.table(df, file = "results.txt", sep = "\t", row.names = FALSE, col.names = TRUE, append = TRUE)
  )
+
+
+
 
 # Fit the Michaelis-Menten model using
 data <- data.frame(concentration, rate)
@@ -89,12 +94,16 @@ liver_weight <- example_params[2, organism]
 Microsomal_protein_yield <- example_params[3, organism]
 in_vivo_clint <- in_vitro_clint*10^(-6)*liver_weight*Microsomal_protein_yield*60
 
+
+
 #Convert to hepatic clearance (CYP2A19 contribution)
 QH_Lh <- example_params[6, organism]
 standard_body_weight <- example_params[1, organism]
 
 hepatic_clerance_kgh <- (in_vivo_clint*QH_Lh)/(in_vivo_clint+QH_Lh)
 hepatic_clerance_Lh <- hepatic_clerance_kgh/standard_body_weight
+
+
 
 #save the results
 cat("\nResults of the calculations:\n", file = "results.txt", append = TRUE)
@@ -111,9 +120,19 @@ suppressWarnings(
 		 write.table(selected_columns, file = "results.txt", sep = "\t", row.names = FALSE, col.names = TRUE, append = TRUE)
 )
 
+
+
 cat("\n\n", file = "results.txt", append = TRUE)
 cat("In vitro CLint:", in_vitro_clint, "X 10^-6 L/min per mg protein \n", file = "results.txt", append = TRUE)
 cat("In vivo Clint:", in_vivo_clint, "L/h  \n", file = "results.txt", append = TRUE)
 cat("Hepatic clearance:", hepatic_clerance_kgh, "L/h ", hepatic_clerance_Lh,"L/h/kg\n", file = "results.txt", append = TRUE)
+
+
+
+
+
+
+
+
 
 
