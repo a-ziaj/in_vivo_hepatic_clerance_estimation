@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #remove any previous results
 if [ -d "results" ]; then
     rm -fr results	
@@ -11,7 +10,6 @@ else
 	mkdir results
 	echo -e "new results directory created"
 fi
-
 #ask if you want to run the script on example data
 echo -e "Would like to run the script on example rate of elimination data (elimination of coumarin via metabolism to 7-hydroxycoumarin by CYP2A6). [Y/n]"
 
@@ -92,9 +90,7 @@ while true; do
 done
 
 Rscript generate_graphs_and_report.R "$coumarin" "$organismm"
-
 mv results.txt results/
 mv hanes_woolf_plot.png results/
 mv michaelis_menten_model.png results/
-
 echo -e "Michaelis-Menten model, Hanes-Woolf plot and results.txt were saved to the results folder." 
